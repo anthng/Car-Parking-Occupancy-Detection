@@ -5,7 +5,7 @@ from tensorflow.keras.layers import Conv2D, MaxPooling2D, Activation, Flatten, D
 from tensorflow.keras.models import Model
 
 class MyModel(Model):
-      def __init__(self, classes = 2, chanDim=-1):
+      def __init__(self, classes = 1, chanDim=-1):
             super(MyModel, self).__init__()
             
             #self.pretrained = MobileNetV2(include_top=False, weights='imagenet')
@@ -26,7 +26,7 @@ class MyModel(Model):
             self.bn3 = BatchNormalization()
 
             self.out = Dense(classes)
-            self.softmax = Activation("softmax")
+            self.softmax = Activation("sigmoid")
       
       def call(self, inputs):
             #x = self.pretrained(inputs)
