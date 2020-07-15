@@ -14,8 +14,27 @@ More info about the dataset: https://web.inf.ufpr.br/vri/databases/parking-lot-d
 
 * [make_dataset.py](./make_dataset.py) - Build dataset
 
-* [model.py](./model.py) - My baseline model using CNN
+* [model](./model) - Contain my baseline model and pre-trained model
+  * [baseline.py](./model/baseline.py) - My baseline
+  * [vgg.py](./model/vgg.py) - Apply the pre-trained VGG16
+* [train.py](./train.py) - Run training for model folder
+* [extract_feats.py](./extract_feats.py) - Use CNN model to extract features
+* [svm_clf_from_cnn_feats.py](./svm_clf_from_cnn_feats.py) - Classifier
 
-* [cnn_svm.py](./) - CNN extracts the features and a binary SVM classifier to detect the occupancy of parking spaces
+# My Result
 
-* [train.py](./train.py) - Run training phase
+I can not apply the pre-trained VGG16 model to extract features because of my hardware limitations. I used a MobileNet (is a ight-weight model) instead of VGG16 as mentioned by the author. The result was not gained as my expectation. 
+
+## My Baseline
+
+![baseline](/imgs/baseline.png)
+![baseline](/imgs/baseline_result.png)
+
+## Pre-trained model
+
+![Pre-trained](/imgs/transfer.png)
+![Pre-trained](/imgs/vgg_result.png)
+
+## CNN - Feature Extraction and SVM Classifier
+
+![cnn-feats-svm-clf](/imgs/svm.png)
