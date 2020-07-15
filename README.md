@@ -23,7 +23,7 @@ More info about the dataset: https://web.inf.ufpr.br/vri/databases/parking-lot-d
 
 # My Result
 
-I can not apply the pre-trained VGG16 model to extract features because of my hardware limitations. I used a MobileNet (is a ight-weight model) instead of VGG16 as mentioned by the author. The result was not gained as my expectation. 
+I can not apply the pre-trained VGG16 model to extract features because of my hardware limitations. I used a MobileNet (is a ight-weight model) instead of VGG16 as mentioned by the authors. The result was not gained as my expectation. 
 
 ## My Baseline
 
