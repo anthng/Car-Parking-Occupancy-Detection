@@ -1,6 +1,6 @@
 # Parking Lot Detection
 
-The implementation of [Real-time image-based parking occupancy detection using deep learning](http://ceur-ws.org/Vol-2087/paper5.pdf) paper. In this paper, the auothors perform a pre-trained of Convolutional Neural Networks (VGGNet) and Support Vector Machine in order to detect parking occupancy.
+The implementation of [Real-time image-based parking occupancy detection using deep learning](http://ceur-ws.org/Vol-2087/paper5.pdf) paper. In this paper, the authors perform a pre-trained of Convolutional Neural Networks (VGGNet) and Support Vector Machine in order to detect parking occupancy.
 
 # Dataset: Parking Lot Database
 
