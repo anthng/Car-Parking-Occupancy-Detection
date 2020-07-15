@@ -1,13 +1,13 @@
 import tensorflow as tf
 
-from tensorflow.keras.applications.mobilenet_v2 import MobileNetV2
+from tensorflow.keras.applications.vgg16 import VGG16
 from tensorflow.keras.layers import Conv2D, MaxPooling2D, Activation, Flatten, Dense, Input, BatchNormalization
 from tensorflow.keras.models import Model
 
 class MyModel(Model):
       def __init__(self, classes = 1, chanDim=-1):
             super(MyModel, self).__init__()
-            
+            self.classes = classes
             #self.pretrained = MobileNetV2(include_top=False, weights='imagenet')
             
             self.conv1 = Conv2D(64, (3, 3), padding="same", activation= 'relu')
@@ -26,7 +26,8 @@ class MyModel(Model):
             self.bn3 = BatchNormalization()
 
             self.out = Dense(classes)
-            self.softmax = Activation("sigmoid")
+            self.sigmoid = Activation("sigmoid")
+            self.softmax = Activation("softmax")
       
       def call(self, inputs):
             #x = self.pretrained(inputs)
@@ -48,6 +49,10 @@ class MyModel(Model):
             x = self.bn3(x)
 
             x = self.out(x)
-            x = self.softmax(x)
+
+            if self.classes > 1:
+                  x = self.softmax(x)
+            else:
+                  x = self.sigmoid(x)
 
             return x
