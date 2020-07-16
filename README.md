@@ -38,3 +38,7 @@ I can not apply the pre-trained VGG16 model to extract features because of my ha
 ## CNN - Feature Extraction and SVM Classifier
 
 ![cnn-feats-svm-clf](/imgs/svm.png)
+
+# Acknowledgment
+
+Source code for making dataset and training are built based on [Real-time parking lot occupancy detection using Deep Learning](https://github.com/gsadhas/real-time-parking-occupancy-detection)
