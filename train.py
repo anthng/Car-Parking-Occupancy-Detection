@@ -80,11 +80,9 @@ history = model.fit(train_generator, steps_per_epoch=NB_TRAIN_SAMPLES // BATCH_S
       , validation_steps=NB_VALID_SAMPLES // BATCH_SIZE, class_weight = class_weight\
       , verbose=1)
 
-
 occupied_dir = VALID_DIR + 'Occupied/*.jpg'
 empty_dir = VALID_DIR + 'Empty/*.jpg'
 valid_images = list(glob(occupied_dir) + glob(empty_dir))
-valid_images = valid_images[:NB_VALID_SAMPLES]
 
 ground_truths = []
 my_preds = []
