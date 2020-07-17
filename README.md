@@ -45,7 +45,7 @@ For feature extraction by CNN, and SVM classifier
 
 # My Result
 
-I can not apply the pre-trained VGG16 model to extract features because of my hardware limitations. I used a MobileNet (is a ight-weight model) instead of VGG16 as mentioned by the authors. The result was not gained as my expectation when applying MobileNet. 
+I can not apply the pre-trained VGG16 model to extract features because of my hardware limitations. I used a MobileNet (is a light-weight model) instead of VGG16 as mentioned by the authors. The result was not gained as my expectation when applying MobileNet. 
 
 ## My Baseline
 
